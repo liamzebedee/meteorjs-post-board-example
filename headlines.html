@@ -1,0 +1,21 @@
+<head>
+	<title>Meteor.js headlines</title>
+</head>
+
+<body>
+  {{> post_create}}
+  {{> posts}}
+</body>
+
+<template name="post_create">
+	<input type="text" id="headline" placeholder="Enter headline and press enter to post!">
+</template>
+
+<template name="posts">
+	<h1>Posts</h1>
+	<ul>
+	{{#each all}}
+		<li>{{ title }}
+	{{/each}}
+	</ul>
+</template>
